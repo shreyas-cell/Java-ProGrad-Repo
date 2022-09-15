@@ -1,3 +1,4 @@
+package com.p;
 import java.util.Scanner;
 public class MagicSqaure {
 	
@@ -10,10 +11,13 @@ public class MagicSqaure {
 			
 			}
 			sum_dl=sum_dl+arr[i][i];
-			sum_dr=arr[i][n-1];
+			sum_dr=sum_dr+arr[i][n-1];
+			//System.out.println(arr[i][n-1]);
 			n=n-1;
 		}	
-		if(sum_r==sum_c && sum_dr==sum_dl && sum_r==sum_dr && sum_c==sum_dl)
+		
+		//System.out.println("diagonal sum dl "+sum_dl+" d sum dr "+sum_dr+" sum_r "+sum_r+" sum_c "+sum_c);
+		if(sum_r==sum_c && sum_dr==sum_dl)
 			return "MagicSqaure";
 		else
 			return "Not MagicSqaure";
